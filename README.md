@@ -1,1 +1,1 @@
-<h1>LATIHAN</h1>
+<h1>LATIHAN LKS 2025</h1>
