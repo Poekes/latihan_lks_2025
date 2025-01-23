@@ -14,9 +14,8 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 
-Route::group(['middleware' => ['auth']], function () {
-    Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
-        Route::get('/', [AdminPageController::class, 'index'])->name('admin.dasboard');
-    });
-    Route::post('/logout', [loginController::class, 'logout'])->name('logout');
+Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
+    Route::get('/', [AdminPageController::class, 'index'])->name('admin.dasboard');
+    Route::post('galery', [AdminPageController::class, 'galery'])->name('galery.upload');
 });
+Route::post('/logout', [loginController::class, 'logout'])->name('logout');

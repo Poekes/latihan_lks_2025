@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('galeries', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
+            $table->string('file')->unique();
             $table->string('filename')->unique();
             $table->text('info');
             $table->timestamps();
